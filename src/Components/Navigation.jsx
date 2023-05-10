@@ -3,14 +3,14 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components/macro'
 
 const Navigation = () => {
+
   return (
-    <div>
       <nav class="navbar navbar-expand-lg bg-dark text-white">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
-            <img src="./assets/img/logo.png" alt="logo" />
+            <img className='w-75' src="./img/logo.png" alt="logo" />
           </a>
-          <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler bg-white " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -26,8 +26,8 @@ const Navigation = () => {
                 </NavLink>
               </NavItem>
               <NavItem class="nav-item">
-                <NavLink to="/prestations-tarifs" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
-                  Prestation/tarifs
+                <NavLink to={"/prestation-1"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
+                  Prestations/tarifs
                 </NavLink>
               </NavItem>
               <NavItem class="nav-item">
@@ -39,7 +39,6 @@ const Navigation = () => {
           </div>
         </div>
       </nav>
-    </div>
   );
 };
 
@@ -47,11 +46,13 @@ const NavItem = styled.li `
   a {
     text-decoration: none;
     color: whitesmoke;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: auto 15px;
     display: flex;
     justify-content: center;
-    padding: 5px;
+    padding: 7px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.7rem;
   }
 
   .active {
