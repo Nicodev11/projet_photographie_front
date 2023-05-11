@@ -6,7 +6,7 @@ export const servicesData = [
     places: ["Exterieur", "Studio"],
     img: "./img/prestation1.jpg",
     infos: "",
-    price: 130
+    price: '130 €'
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const servicesData = [
     places: ["Exterieur", "Studio"],
     img: "./img/prestation2.jpg",
     infos: "",
-    price: 195
+    price: '195 €'
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const servicesData = [
     places: ["Exterieur", "Studio"],
     img: "./img/prestation3.jpg",
     infos: "* 30 euros en supplément par personne au-delà de 4 (hormis enfant jusqu’à 2 ans)",
-    price: 220
+    price: '220 €'
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const servicesData = [
     places: ["Domicile", "Exterieur", "Studio"],
     img: "./img/prestation4.jpg",
     infos: "",
-    price: 160
+    price: '160 €'
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export const servicesData = [
     places: ["Domicile"],
     img: "./img/prestation5.jpg",
     infos: "",
-    price: 100
+    price: '100 €'
   },
   {
     id: 6,
@@ -51,6 +51,6 @@ export const servicesData = [
     places: ["Domicile", "Exterieur"],
     img: "./img/prestation6.jpg",
     infos: "",
-    price: 100
+    price: ' * Sur devis'
   },
 ];

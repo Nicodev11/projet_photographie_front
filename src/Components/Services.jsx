@@ -2,51 +2,62 @@ import React, { useState } from "react";
 import styled from 'styled-components/macro'
 import { servicesData } from "../data/servicesData";
 
-const Services = ({serviceNumber}) => {
+const Services = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const item = servicesData[currentIndex];
 
-  const [currentServices] = useState(servicesData[serviceNumber]);
+  const nextItem = () => {
+    setCurrentIndex(currentIndex === servicesData.length - 1 ? 0 : currentIndex + 1);
+  };
+  const previousItem = () => {
+    setCurrentIndex(currentIndex === 0 ? servicesData.length - 1: currentIndex - 1);
+  };
 
   return (
     <ServiceStyled>
-      <div className="container services-main">
+      <div className="container services-main my-auto">
         <div className="row">
           <div className="img-content col-md-6">
             <div className="img-container hover">
               <img
-                src={currentServices.img}
-                alt={currentServices.title}
+                src={item.img}
+                alt={item.title}
                 className="img-thumbnail"
               />
             </div>
           </div>
           <div className="services-content text-center text-white col-md-6">
-            <h1>{currentServices.title}</h1>
-            <p>{currentServices.description}</p>
+            <h1>{item.title}</h1>
+            <p>{item.description}</p>
             <span>
-              <p>{currentServices.infos}</p>
+              <p>{item.infos}</p>
             </span>
             <ul className="places">
-              {currentServices.places.map((item) => (
+              {item.places.map((item) => (
                 <li key={item}> {item} </li>
               ))}
             </ul>
-            <div className="price">{currentServices.price} €</div>
+            <div className="price">{item.price}</div>
           </div>
         </div>
       </div>
+      <ButtonStyled>
+      <div className="scroll-bottom">
+          <i onClick={nextItem} class="bi bi-chevron-right right"></i>
+          <i onClick={previousItem} class="bi bi-chevron-left left"></i>
+      </div>
+      </ButtonStyled>
     </ServiceStyled>
   );
 };
 
 const ServiceStyled = styled.div `
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   width: 100%;
   display: flex;
   justify-content: center;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5rem;
+  height: 100%;
 
   .services-content {
     display: flex;
@@ -73,14 +84,32 @@ const ServiceStyled = styled.div `
       font-family: 'Courier New', Courier, monospace;
       font-style: italic;
     }
+    
+  }
+  `
 
-    .img-container {
-      animation:flip-scale-up-hor .5s linear both
+  const ButtonStyled = styled.div `
+  i {
+    position: absolute;
+    transform: translateY(-20%);
+    bottom: 20%;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    transition: 0.25s;
+    user-select: none;
+
+    &:hover {
+      font-size: 4rem;
     }
-    @keyframes flip-scale-up-hor{0%{transform:scale(1) rotateX(0)}50%{transform:scale(2.5) rotateX(-90deg)}100%{transform:scale(1) rotateX(-180deg)}}
-     
   }
 
+  .left {
+    left: 25px;
+  }
+
+  .right {
+    right: 25px;
+  }
 `
 
 export default Services;

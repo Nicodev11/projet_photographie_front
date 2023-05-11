@@ -3,12 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 /* font-family: 'Josefin Sans', sans-serif; */
 
-#root {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
 #root > div {
   background: rgba(0, 0, 0, 0.51) url('../public/img/photographer.jpg');
   height: 100%;
@@ -16,4 +10,7 @@
   background-position: center;
   background-blend-mode: darken;
   position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }

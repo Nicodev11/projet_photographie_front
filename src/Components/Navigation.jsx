@@ -26,8 +26,8 @@ const Navigation = () => {
                 </NavLink>
               </NavItem>
               <NavItem class="nav-item">
-                <NavLink to={"/prestation-1"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
-                  Prestations/tarifs
+                <NavLink to={"/prestations"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
+                  Prestations/Tarifs
                 </NavLink>
               </NavItem>
               <NavItem class="nav-item">
@@ -53,6 +53,27 @@ const NavItem = styled.li `
     padding: 7px;
     font-family: 'Dancing Script', cursive;
     font-size: 1.7rem;
+  }
+
+  .dropdown-toggle{
+    &::after {
+      margin: auto 15px;
+    }
+
+    &:hover {
+      background: whitesmoke;
+      border-radius: 10px;
+      color: black !important;
+      transition: ease 0.8s;
+    }
+  }
+  
+  .nav-link.show {
+      color: whitesmoke;
+    }
+
+  .dropdown-toggle:hover{
+    margin: auto 15px;
   }
 
   .active {
