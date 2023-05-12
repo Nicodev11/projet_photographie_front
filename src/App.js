@@ -7,6 +7,7 @@ import Contact from './Pages/Contact';
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
 import ServicesPrice from './Pages/ServicesPrice';
+import NotFound from './Pages/NotFound';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/galerie' element={<Gallery />} />
         <Route path='/prestations' element={<ServicesPrice />} />
+        <Route path='/*' element={<NotFound />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer/>

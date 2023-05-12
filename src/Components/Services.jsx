@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { servicesData } from "../data/servicesData";
 
 const Services = () => {
@@ -15,6 +15,9 @@ const Services = () => {
 
   return (
     <ServiceStyled>
+      <ButtonStyled>
+        <i onClick={previousItem} class="bi bi-chevron-left left"></i>
+      </ButtonStyled>
       <div className="container services-main my-auto">
         <div className="row">
           <div className="img-content col-md-6">
@@ -42,10 +45,7 @@ const Services = () => {
         </div>
       </div>
       <ButtonStyled>
-      <div className="scroll-bottom">
-          <i onClick={nextItem} class="bi bi-chevron-right right"></i>
-          <i onClick={previousItem} class="bi bi-chevron-left left"></i>
-      </div>
+        <i onClick={nextItem} class="bi bi-chevron-right right float-end"></i>
       </ButtonStyled>
     </ServiceStyled>
   );
@@ -89,26 +89,17 @@ const ServiceStyled = styled.div `
   `
 
   const ButtonStyled = styled.div `
+
   i {
-    position: absolute;
-    transform: translateY(-20%);
-    bottom: 20%;
+    position: relative;
+    top: 50%;
     font-size: 3rem;
     color: rgb(255, 255, 255);
     transition: 0.25s;
-    user-select: none;
 
     &:hover {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
-  }
-
-  .left {
-    left: 25px;
-  }
-
-  .right {
-    right: 25px;
   }
 `
 

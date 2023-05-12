@@ -12,7 +12,9 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "babel-plugin-styled-components": "^2.1.1",
+    "styled-components": "^5.3.10"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,9 +42,5 @@
   },
   "engines": {
     "node": "20.x"
-  },
-  "devDependencies": {
-    "babel-plugin-styled-components": "^2.1.1",
-    "styled-components": "^5.3.10"
   }
 }
