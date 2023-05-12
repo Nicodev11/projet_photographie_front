@@ -38,6 +38,9 @@
       "last 1 safari version"
     ]
   },
+  "engines": {
+    "node": "20.x"
+  },
   "devDependencies": {
     "babel-plugin-styled-components": "^2.1.1",
     "styled-components": "^5.3.10"
