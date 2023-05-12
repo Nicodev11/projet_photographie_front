@@ -6,6 +6,7 @@ const Home = () => {
     <HomeStyled>
       <div className="dynamicText puff-in-left container-fluid w-100 text-center">
         <h1>Fabien Cantin - Photographe</h1>
+        <p>Photographe professionnel et passionnné avant tout !</p>
       </div>
     </HomeStyled>
   );
@@ -18,13 +19,18 @@ const HomeStyled = styled.div `
     top: 50%;
     left: 50%;
     transform: translate(-50%);
+    animation:tracking-in-expand 1.5s cubic-bezier(.215,.61,.355,1.000) both
   }
   
   h1 {
     color: white;
     font-family: 'Dancing Script', cursive;
     font-size: 3rem;
-    animation:tracking-in-expand 1.5s cubic-bezier(.215,.61,.355,1.000) both
+  }
+
+  p {
+    color: white;
+    text-transform : uppercase;
   }
 
   @keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
