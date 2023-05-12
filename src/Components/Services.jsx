@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { servicesData } from "../data/servicesData";
 
 const Services = () => {
