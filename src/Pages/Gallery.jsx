@@ -17,7 +17,7 @@ const Gallery = () => {
         </div>
       ))}
       </div>
-      <div className="row">
+      <div className="row m-0">
         {imagesData
         .filter((categories) => categories.name.includes(selectedRadioService))
         .map((images, index) => (

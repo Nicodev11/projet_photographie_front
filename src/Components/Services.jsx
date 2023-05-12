@@ -14,7 +14,7 @@ const Services = () => {
   };
 
   return (
-    <ServiceStyled>
+    <ServiceStyled className="my-3">
       <ButtonStyled>
         <i onClick={previousItem} class="bi bi-chevron-left left"></i>
       </ButtonStyled>
