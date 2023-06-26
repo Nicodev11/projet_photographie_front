@@ -8,6 +8,9 @@ import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
 import ServicesPrice from './Pages/ServicesPrice';
 import NotFound from './Pages/NotFound';
+import Login from './Pages/Login';
+import Dashboard from './Pages/admin/Dashboard';
+
 
 const App = () => {
   return (
@@ -18,6 +21,8 @@ const App = () => {
         <Route path='/galerie' element={<Gallery />} />
         <Route path='/prestations' element={<ServicesPrice />} />
         <Route path='/*' element={<NotFound />} />
+        <Route path='/connexion' element={<Login />} />
+        <Route path='/admin' element={<Dashboard />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer/>
