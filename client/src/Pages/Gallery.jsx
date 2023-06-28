@@ -29,9 +29,9 @@ const Gallery = () => {
     <div>
       <div className="container mt-3 bg-dark rounded p-2 border border-dark-subtle d-flex flex-md-row mb-3 flex-column justify-content-around">
         {radios.map((categories) => (
-          <div class="form-check form-check-inline text-white d-flex justify-content-center mb-2">
+          <div class="form-check form-check-inline text-white d-flex justify-content-center my-auto">
             <input
-              class="form-check-input me-2"
+              class="form-check-input me-2 "
               type="radio"
               id={categories}
               checked={categories === selectedRadioService}
@@ -42,6 +42,13 @@ const Gallery = () => {
             </label>
           </div>
         ))}
+        { selectedRadioService &&
+          <button className="btn btn-primary"
+            onClick={() => setSelectedRadioService("")}
+          >
+            Voir tout
+          </button>
+        }
       </div>
       <div className="row m-0">
           {
